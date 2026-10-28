@@ -139,10 +139,18 @@ veces más rápido en radio y unas 1.600 veces más rápido en vecino más cerca
 
 ![Construcción](graficas/construccion.png)
 
+![Construcción, tamaños grandes](graficas/construccion_grande.png)
+
 Construir el árbol cuesta cerca de O(n log n): unos 0,19 s con 10.000 puntos y
 0,40 s con 20.000. Ese costo se recupera con pocas consultas: para n ≥ 25,
 entre 4 y 12 consultas en mis pruebas. Con datos estáticos y muchas
 consultas, conviene construirlo.
+
+En la gráfica de tamaños grandes, la construcción sube casi como una recta en
+escala logarítmica, con una pendiente un poco mayor que 1: pasa de unos
+0,015 s con 1.000 puntos a unos 2,3 s con 100.000. Al multiplicar n por 100,
+el tiempo se multiplica por unos 150, lo cual es cercano a lo esperado para
+O(n log n).
 
 ### Datos agrupados (zonas densas)
 
